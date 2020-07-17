@@ -1,0 +1,72 @@
+<div class="sub-title">
+    <h3>{{produto.categoria }} / {{ produto.nome}}</h3>
+</div>
+<div class="back-to-home"> <a ng-href="/"> Home </a></div>
+<div class="details">
+    <div class="row">
+        <div class="col-sm-6 border-details-img">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="text-center img-details">
+                        <!-- colocar zoom aqui -->
+                        <img class="product-image-grande" ng-src="/img/{{produto.imagemDestacada}}"
+                            alt="{{produto.nome}}" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <ul class="imagensPequenas">
+                        <li ng-repeat="imagem in produto.imagens">
+                            <img class="product-image-pequena" ng-src="/img/{{imagem.nome}}"
+                                ng-click="trocarImagemDestacada(imagem.nome)" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 border-details-img">
+            <div class="row">
+                <div class="details-name">
+                    <span>{{produto.nome}}</span>
+                </div>
+            </div>
+            <div class="row border-row">
+                <div class="col-sm-3 details-reviews">
+                    Nota:
+                </div>
+                <div class="col-sm-3 details-reviews">
+                    <span class="stars">
+                        <span ng-style="{ 'width': getStars(produto.NotaApi) }"></span></span>
+                </div>
+                <div class="col-sm-3 details-reviews">
+                    ( {{ produto.notas.length}} Reviews )
+                </div>
+            </div>
+            <div class="row border-row">
+                <div class="col-sm-3 details-precoMedio">
+                    Preço Médio:
+                </div>
+                <div class="col-sm-3 details-precoMedio">
+                    <span class="dolars">
+                        <span ng-style="{ 'width': getDolars(produto.precoMedio) }">
+                </div>
+            </div>
+            <div class="row border-row">
+                <div class="col-sm-3 details-disponibilidade">
+                    Disponibilidade:
+                </div>
+                <div class="col-sm-3 details-disponibilidade">
+                    <span ng-class="produto.disponivel ? 'azulBB' : 'red'" class="disponivel-details">
+                        {{ produto.disponivel ? 'Disponível' : 'Indisponível'}}
+                    </span>
+                </div>
+            </div>
+
+            <div class="row button-row">
+                <div class="col-sm-12 text-center">
+                    <button type="button" class="btn btn-primary btn-colorLooks"
+                        >Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

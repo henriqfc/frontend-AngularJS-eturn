@@ -1,0 +1,252 @@
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 7rem 1fr 5rem;
+    height: 100%;
+  }
+  .text-center {
+    text-align: center;
+  }
+html{
+    font-size: 62.5%; /* default é 16px, 16px * 62.5 = 10px = 1rem */
+    box-sizing: border-box;
+  }
+  body {
+    font: 1.6rem Helvetica;
+    height: 100vh;
+    margin: 0;
+  }
+.sub-title {
+    background-color: #006270;
+    color: white;
+    margin: 0;
+    padding: 0.1rem 0.1rem 0.1px 3.5rem;
+}
+  .header{
+    background-color: #006270;
+    color: #ffffff;
+    padding: 0.5rem 0rem 2rem 3.5rem;
+  }
+  .main{
+    grid-area: main;
+  }
+
+  .footer{
+    grid-area: footer;
+    background-color: #006270;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .filtro {
+    padding: 1rem;
+    border: .1rem #c0c0c0 solid;
+    border-radius: .5rem;
+  }
+
+  .inline {
+    display: flex;
+  }
+
+  .products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+    width: 95%;
+  }
+  .products li {
+    list-style-type: none;
+    flex: 0 1 34rem;
+    margin: 0.4rem 0.2rem 0rem 0rem;
+    height: 34rem;
+    padding: 0.2rem 0.6rem 0rem 0.8rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  .azulBB {
+    color: lightgreen;
+  }
+  .red {
+    color: red;
+  }
+  a:hover {
+    color: #533074;
+    text-decoration: none;
+  }
+  .product-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: justify;
+  }
+  .product-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    height: 1.2rem;
+  }
+  .product-rating {
+    margin-bottom: 1rem;
+    height: 0.4rem;
+  }
+  .product-image {
+    max-width: 100%;
+    height: 100%;
+    max-height: 20rem;
+    border-radius: 1.1rem;
+  }
+  .product-image-grande {
+    max-width: 100%;
+    height: 100%;
+    max-height: 50rem;
+    border-radius: 1.1rem;
+  }
+
+  .back-to-home {
+    padding: 1rem;
+  }
+  .details {
+    /* display: flex; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+.image-details {
+  border: 0.1rem #808080 solid;
+    border-radius: 4.1rem;
+}
+  .details-image {
+    padding: 1rem;
+  }
+  .details-image img {
+    max-width: 60rem;
+    max-height: 49rem;
+  }
+
+  .details-info {
+    flex: 1 1 30rem;
+  }
+  .details-action {
+    flex: 1 1 30rem;
+    border: .1rem #808080 solid;
+    border-radius: .5rem;
+    background-color: #f8f8f8;
+    padding: 1rem;
+  }
+  
+  .details-info ul, .details-action ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .details-info li, .details-action li {
+    margin-bottom: 1rem;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+.btn-colorLooks {
+  background-color: #006270 !important; 
+}
+
+  span.stars, span.stars span {
+    display: block;
+   /* Download the star image here: http://stackoverflow.com/questions/1987524/turn-a-number-into-star-rating-display-using-jquery-and-css */
+    background: url('https://apppresser.com/wp-content/uploads/2015/11/stars.png') 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+  background-position: 0 0;
+}
+span.dolars, span.dolars span {
+  display: block;
+ /* Download the star image here: http://stackoverflow.com/questions/1987524/turn-a-number-into-star-rating-display-using-jquery-and-css */
+  background: url('../img/pngegg.png') 0 -24px repeat-x;
+  width: 80px;
+  height: 16px;
+}
+
+span.dolars span {
+background-position: 0 0;
+}
+
+.alignright {
+float:right;
+}
+.aligncenter {
+  float:none;
+  }
+.alignleft {
+  float:left;
+  }
+
+
+  .imagensPequenas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+    width: 95%;
+  }
+  .imagensPequenas li {
+    list-style-type: none;
+    flex: 0 1 10rem;
+    margin: 0.1rem 0.1rem 0rem 0rem;
+    height: 10rem;
+    padding: 0.1rem 0.1rem 0rem 0.1rem;
+  }
+  .product-image-pequena {
+    max-width: 100%;
+    height: 100%;
+    max-height: 20rem;
+    border-radius: 1.1rem;
+  }
+
+  .border-details-img {
+    border: 0.01rem #c0c0c0 solid;
+    border-radius: 0.6rem;
+  }
+
+  .details-name {
+    font-size: 3.3rem;
+    padding: 2rem;
+    border: .02rem #c0c0c0 solid;
+    color: #107f92;
+  }
+.border-row {
+  border: .01rem #c0c0c0 solid;
+}
+.button-row {
+  padding: 3rem;
+}
+  .details-reviews {
+    font-size: 2rem;
+    padding: 1rem;
+    color: #107f92;
+  }
+  .details-precoMedio{
+    font-size: 2rem;
+    padding: 1rem;
+    color: #107f92;
+  }
+  .details-disponibilidade{
+    font-size: 2rem;
+    padding: 1rem;
+    color: #107f92;
+  }

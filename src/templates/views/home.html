@@ -1,0 +1,110 @@
+<div class="sub-title">
+    <h3>Conheça nossos looks</h3>
+</div>
+<div class="filtro">
+    <div class="row text-center">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8  text-center">
+            <div class="row">
+                <!-- <div class="col-sm-2">
+                    <label>Filtrar por:</label>
+                </div> -->
+                <div class="col-sm-2">
+                    <input type="checkbox" ng-model="filter.Disponivel" ng-change="selected()">
+                    <label>Disponível</label>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label>Preço Médio</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <!-- <multiselect ng-if="filter.PrecosLista.length > 0" multiple="true" ng-model="filter.Precos"
+                                options="c.Nome for c in filter.PrecosLista" change="selected()"></multiselect> -->
+                            <!-- <dropdown-multiselect ng-if="dropDownPrecoConfig.options.length > 0" dropdown-config="dropDownPrecoConfig" model="filter.Precos"></dropdown-multiselect> -->
+                            <select class="input-sm col-sm-12" ng-model="filter.Precos" ng-options="c.Nome for c in filter.PrecosLista" ng-change="selected()"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label>Categoria</label>
+                        </div>
+                        <div class="col-sm-9">
+                            <select class="input-sm col-sm-12" ng-model="filter.Categorias" ng-options="c.Nome for c in filter.CategoriasLista" ng-change="selected()"></select>
+                            <!-- <dropdown-multiselect ng-if="dropDownCategoriaConfig.options.length > 0" dropdown-config="dropDownCategoriaConfig" model="filterCategorias"
+                                ng-change="selected()" ng-model="filter.Categorias"></dropdown-multiselect> -->
+                            <!-- <multiselect ng-if="filter.CategoriasLista.length > 0" multiple="true"
+                                ng-model="filter.Categorias" options="c.Nome for c in filter.CategoriasLista"
+                                change="selected()"></multiselect> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2 pull-right">
+                    <!-- <button type="button" class="btn-sm" ng-click="limparFiltro()">Limpar</button> -->
+                    <button type="button" class="btn btn-primary btn-colorLooks" ng-click="limparFiltro()">
+                        Limpar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+        <!-- <div class="col-sm-4">
+            <div class="row">
+                
+            </div>
+        </div> -->
+    </div>
+</div>
+<div class="produtos">
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="products">
+                <li ng-repeat="produto in ProdutosFiltrados">
+                    <div class="product">
+                        <div class="text-center">
+                            <a ng-href="/product/{{produto.id}}">
+                                <img class="product-image" ng-src="/img/{{produto.imagemDestacada}}"
+                                    alt="{{produto.nome}}" />
+                            </a>
+                        </div>
+                        <div class="product-name">
+                            <a ng-href="/product/{{produto.id}}">{{produto.nome}}</a>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars alignright">
+                                <span ng-style="{ 'width': getStars(produto.NotaApi) }"></span></span>
+                        </div>
+                        <div class="product-price">
+                            <div class="row">
+                                <div class="col-sm-4 alignleft">
+                                    {{produto.categoria}}
+                                </div>
+                                <div class="col-sm-4 text-center">
+                                    <span class="dolars">
+                                        <span ng-style="{ 'width': getDolars(produto.precoMedio) }">
+                                </div>
+                                <div class="col-sm-4 alignright">
+                                    <span ng-class="produto.disponivel ? 'azulBB' : 'red'" class="alignright">
+                                        {{ produto.disponivel ? 'Disponível' : 'Indisponível'}}
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- <span class="alignleft">{{produto.categoria}} -
+                                <span class="stars">
+                                    <span ng-style="{ 'width': getStars(produto.precoMedio) }"></span>
+                                </span>
+                            </span>
+                            <span ng-class="produto.disponivel ? 'azulBB' : 'red'" class="alignright">
+                                {{ produto.disponivel ? 'Disponível' : 'Indisponível'}}
+                            </span> -->
+                        </div>
+                        <button type="button" class="btn btn-primary btn-colorLooks"
+                            style="height: 2.5rem" ng-click="clickDetalhes(produto.id)">Detalhes</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

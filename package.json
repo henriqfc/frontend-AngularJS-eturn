@@ -1,0 +1,24 @@
+{
+  "name": "frontend-angularjs-eturn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Henrique",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-route": "1.5.8",
+    "angular-touch": "^1.5.8",
+    "angular-ui-bootstrap": "^2.5.6",
+    "bootstrap": "^4.5.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1"
+  }
+}
