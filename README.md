@@ -6,7 +6,12 @@ Desafio Front-End AngularJS para a empresa e-turn.
 
 # Como Rodar
 
-Para rodar é necessário ter o node/npm e o gulp client (npm install --g gulp) na máquina
+Para rodar é necessário ter o node/npm e o gulp client (npm install --g gulp) na máquina.
+
+Versão do NPM => 6.14.5
+
+Versão do Gulp => CLI version: 2.3.0  // Local version: 4.0.2
+
 
 Na raíz do projeto, abrir o terminal e rodar o código "npm install" para instalar todos as bibliotecas utilizdas (Ex: angularjs, angular-route, etc)
 
